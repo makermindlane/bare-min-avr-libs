@@ -1,18 +1,12 @@
 #pragma once
+#include <stdint.h>
 
 /*
-	Prescaler values for timer/counter clock select.
+	Configure the PWM for specified pin.
 */
-typedef enum PwmPrescaler {
-	PS_NO = 1, 
-	PS_8, 
-	PS_64, 
-	PS_256, 
-	PS_1024
-} PwmPrescaler;
+void pwmConfig(uint8_t pin);
 
 /*
-	Initializes the PWM control register to select fast PWM mode and wave generation.
-	Enables the timer overflow interrupt.
+	Sets the duty cycle for PWM.
 */
-void pwmInit(PwmPrescaler psv);
+void pwmSetDutyCycle(uint8_t val);

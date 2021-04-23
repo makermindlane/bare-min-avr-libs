@@ -9,11 +9,18 @@ Initializes the adc.
 void adcInit();
 
 /*
-Starts the adc conversion
+    Read analog value from specified pin.
+    pin takes value from 0 to 5 (all inclusive).
 */
-void adcStart();
+uint8_t adcRead(uint8_t pin);
 
 /*
-Selects the adc pin for input. pin = 0 to 5 (inclusive).
+    Write analog value (val) to specified pin (pin).
+    This basically uses the pulse width modulation technique
+    to generate analog value. Hence uses PWM enabled pin
+    of atmega328 pin.
+
+    pin is the PWM enabled pin.
+    val is the duty cycle of PWM.
 */
-void adcSetReadPin(uint8_t pin);
+void adcWrite(uint8_t pin, uint8_t val);
