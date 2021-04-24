@@ -1,5 +1,6 @@
 #pragma once
 #include <stdint.h>
+#include "bmPwm.h"
 
 #define BV(bit)		(1 << bit)
 
@@ -23,4 +24,4 @@ uint8_t adcRead(uint8_t pin);
     pin is the PWM enabled pin.
     val is the duty cycle of PWM.
 */
-void adcWrite(uint8_t pin, uint8_t val);
+void adcWrite(PWMPin pin, uint8_t val);

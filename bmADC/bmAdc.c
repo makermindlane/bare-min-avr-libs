@@ -36,7 +36,5 @@ uint8_t adcRead(uint8_t pin) {
 
 void adcWrite(uint8_t pin, uint8_t val) {
 	// Configure the PWM for specified pin.
-	pwmConfig(pin);
-	// Set the duty cycle for PWM.
-	pwmSetDutyCycle(val);
+	pwmConfig(pin, val);
 }
