@@ -13,9 +13,9 @@ void adcInit() {
 }
 
 
-uint8_t adcRead(uint8_t pin) {
+uint8_t adcRead(ADCPin pin) {
 	// Check if the pin is between 0 and 5
-	if (pin >= 0 && pin <= 5) {
+	if (pin >= ADC_PIN_0 && pin <= ADC_PIN_5) {
 		// Select the appropriate adc pin by setting appropriate bits in ADMUX register.
 		ADMUX |= pin;
 		// Disable the digital input function of the adc pin to reduce the power and
@@ -34,7 +34,7 @@ uint8_t adcRead(uint8_t pin) {
 }
 
 
-void adcWrite(uint8_t pin, uint8_t val) {
+void adcWrite(PWMPin pin, uint8_t val) {
 	// Configure the PWM for specified pin.
 	pwmConfig(pin, val);
 }

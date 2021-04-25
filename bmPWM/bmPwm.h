@@ -14,8 +14,3 @@ typedef enum pwmPin {
 	Configure the PWM for specified pin with given dutyCycle.
 */
 void pwmConfig(PWMPin pin, uint8_t dutyCycle);
-
-/*
-	Sets the duty cycle for PWM.
-*/
-// void pwmSetDutyCycle(uint8_t val);
