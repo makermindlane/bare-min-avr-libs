@@ -36,5 +36,5 @@ uint8_t adcRead(ADCPin pin) {
 
 void adcWrite(PWMPin pin, uint8_t val) {
 	// Configure the PWM for specified pin.
-	pwmConfig(pin, val);
+	pwmWrite(pin, val);
 }
